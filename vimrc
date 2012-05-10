@@ -44,7 +44,8 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
-Bundle 'gmarik/sudo-gui.vim'
+"Bundle 'gmarik/sudo-gui.vim'
+Bundle 'sudo.vim'
 Bundle 'milkypostman/vim-togglelist'
 " Automatic Helpers
 Bundle 'IndexedSearch'
@@ -133,7 +134,7 @@ endif
 " Color
 " ---------------
 set background=dark
-colorscheme jellybeans
+"colorscheme jellybeans
 
 " ---------------
 " Backups
