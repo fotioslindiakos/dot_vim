@@ -74,6 +74,7 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
 Bundle 'xhtml.vim--Grny'
+Bundle 'bash-support.vim'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
@@ -83,6 +84,7 @@ Bundle 'L9'
 Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
 Bundle 'mathml.vim'
+
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
@@ -150,7 +152,7 @@ set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
 set encoding=utf-8
 if exists('+colorcolumn')
-  set colorcolumn=80 " Color the 80th column differently
+  "set colorcolumn=80 " Color the 80th column differently
 endif
 
 " ---------------
@@ -618,3 +620,12 @@ endfunction
 
 command! QuickSpellingFix call QuickSpellingFix()
 nmap <silent> <leader>z :QuickSpellingFix<CR>
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+set number
+colorscheme darkblue
+
+nnoremap <CR> :noh<CR><CR>
