@@ -45,8 +45,8 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
-"Bundle 'gmarik/sudo-gui.vim'
-Bundle 'sudo.vim'
+Bundle 'gmarik/sudo-gui.vim'
+"Bundle 'sudo.vim'
 Bundle 'milkypostman/vim-togglelist'
 " Automatic Helpers
 Bundle 'IndexedSearch'
@@ -87,6 +87,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tomtom/tlib_vim'
 Bundle 'mathml.vim'
 
+Bundle "mattn/webapi-vim"
+Bundle "mattn/gist-vim"
 
 filetype plugin indent on  " Automatically detect file types. (must turn on after Vundle)
 
@@ -220,8 +222,8 @@ set complete=.,w,b,u,U
 " Bindings
 " ----------------------------------------
 " Fixes common typos
-command W w
-command Q q
+"command W w
+"command Q q
 map <F1> <Esc>
 imap <F1> <Esc>
 
@@ -643,3 +645,10 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_WinWidth = 20                                                                                                               
 let Tlist_Inc_Winwidth = 0                                                                                                            
 map <F3> :Tlist<CR>                                                                                                                   
+
+augroup myvimrc
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+let g:gist_browser_command = 'firefox %URL% &'
