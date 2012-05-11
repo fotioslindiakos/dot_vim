@@ -37,6 +37,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomtom/quickfixsigns_vim'
+Bundle 'taglist.vim'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -630,3 +631,15 @@ set number
 colorscheme darkblue
 
 nnoremap <CR> :noh<CR><CR>
+
+" Vim-LaTeX settings
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
+"Options for TagList                                                                                                                  
+let Tlist_Compact_Format = 1                                                                                                          
+let Tlist_Enable_Fold_Column = 1                                                                                                      
+let Tlist_Exit_OnlyWindow = 1                                                                                                         
+let Tlist_WinWidth = 20                                                                                                               
+let Tlist_Inc_Winwidth = 0                                                                                                            
+map <F3> :Tlist<CR>                                                                                                                   
