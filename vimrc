@@ -37,7 +37,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Rykka/colorv.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomtom/quickfixsigns_vim'
-Bundle 'taglist.vim'
+Bundle 'majutsushi/tagbar'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -136,8 +136,8 @@ endif
 " ---------------
 " Color
 " ---------------
-set background=dark
-"colorscheme jellybeans
+colorscheme jellybeans
+"colorscheme darkblue
 
 " ---------------
 " Backups
@@ -500,6 +500,7 @@ if has('win32') || has('win64')
 elseif has('gui_macvim')
   let g:Powerline_symbols = 'fancy'
 endif
+let g:Powerline_symbols = 'fancy'
 call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " ---------------
@@ -630,7 +631,6 @@ set pastetoggle=<F2>
 set showmode
 
 set number
-colorscheme darkblue
 
 nnoremap <CR> :noh<CR><CR>
 
@@ -638,17 +638,11 @@ nnoremap <CR> :noh<CR><CR>
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
-"Options for TagList                                                                                                                  
-let Tlist_Compact_Format = 1                                                                                                          
-let Tlist_Enable_Fold_Column = 1                                                                                                      
-let Tlist_Exit_OnlyWindow = 1                                                                                                         
-let Tlist_WinWidth = 20                                                                                                               
-let Tlist_Inc_Winwidth = 0                                                                                                            
-map <F3> :Tlist<CR>                                                                                                                   
-
 augroup myvimrc
   au!
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
 let g:gist_browser_command = 'firefox %URL% &'
+
+nmap <F3> :TagbarToggle<CR> 
