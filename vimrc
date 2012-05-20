@@ -62,6 +62,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
 "   JavaScript
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
@@ -75,8 +76,10 @@ Bundle 'timcharper/textile.vim'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
+Bundle 'greyblake/vim-preview'
 Bundle 'xhtml.vim--Grny'
 Bundle 'bash-support.vim'
+Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 " MatchIt
 Bundle 'matchit.zip'
 Bundle 'kana/vim-textobj-user'
@@ -646,3 +649,9 @@ augroup END
 let g:gist_browser_command = 'firefox %URL% &'
 
 nmap <F3> :TagbarToggle<CR> 
+
+set fillchars+=stl:\ ,stlnc:\
+
+set foldmethod=syntax
+
+autocmd User Rails nnoremap <leader>nn :Rtree<CR>
