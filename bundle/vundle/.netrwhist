@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/fotios/openshift/os-client-tools/express/lib/rhc-rest'
+let g:netrw_dirhist_2='/home/fotios/.rcfiles/.vim/bundle/sudo-gui.vim/plugin'
+let g:netrw_dirhist_3='/home/fotios/.tmux'
+let g:netrw_dirhist_4='/home/fotios/.rcfiles/vim/bundle/vim-rails/plugin'
+let g:netrw_dirhist_5='/home/fotios/isa673/.git/hooks'
+let g:netrw_dirhist_6='/home/fotios/projects/fotioslindiakos.ruhoh.com/_templates/partials'
+let g:netrw_dirhist_7='/home/fotios/openshift/li/broker'
+let g:netrw_dirhist_8='/home/fotios/projects/crafts/.bundle'
